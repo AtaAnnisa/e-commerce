@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - ruxthree</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      :root {
+        --bg-white: #fff;
+        --text-black: #111;
+        --primary-color: #9f002d;
+        --secondary-color: #75001d;
+        --white: #ffffff;
+      }
+
+      * {
+        font-family: "Barlow Condensed", sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+
+      /* NAVBAR */
+      .header {
+        background: var(--bg-white);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand img {
+        border-radius: 50%;
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--text-light) !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0px 15px;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--primary-color);
+      }
+
+      .header_right span {
+        display: block;
+        font-weight: 600;
+        color: var(--text-black);
+      }
+
+      .phone_no {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+      }
+
+      /* PRODUCT SECTION */
+      .product-section {
+        margin-top: 100px;
+        padding: 80px 0;
+        background: linear-gradient(to right, #fff7f9, #ffeef3);
+      }
+
+      .product-section h2 {
+        color: var(--primary);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .product-section p {
+        color: #555;
+        margin-bottom: 50px;
+      }
+
+      .product-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .product-card img {
+        border-radius: 10px 10px 0 0;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .product-card .card-body {
+        padding: 20px;
+      }
+
+      .product-card .card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--secondary);
+      }
+
+      .product-card .price {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .btn-buy {
+        background: linear-gradient(to right, #75001d5e, #9f002ddd);
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: 0.3s ease;
+      }
+
+      .btn-buy:hover {
+        background: var(--secondary);
+      }
+
+      /* FOOTER */
+      .footer {
+        background: var(--text-black);
+        color: var(--white);
+        padding: 30px 0;
+        margin-top: 80px;
+        font-size: 0.9rem;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
+      .footer .address {
+        margin-top: 10px;
+        font-style: normal;
+        color: #ddd;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="full_nav">
+      <div class="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="https://i.pinimg.com/736x/28/de/ed/28deedc74448fcc181eff0760f890547.jpg"
+                alt="logo"
+                width="50"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-stream navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="uts.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="uts_about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="uts_product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="uts_gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="uts_contact.html">Contact</a>
+                </li>
+              </ul>
+              <div class="header_right">
+                <span>Call Us!</span>
+                <span class="phone_no">+62 8345678989</span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="product-section">
+      <div class="container">
+        <h2>Our Products</h2>
+        <p>
+          Freshly baked cakes and pastries made with love and the finest
+          ingredients.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/1200x/d0/8a/fc/d08afc7507b9358851baf537f3573526.jpg"
+                alt="Cake 1"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Fudge Cake</h5>
+                <p class="price">Rp 75.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/7e/e2/92/7ee2925d400ee11645154338430533a1.jpg"
+                alt="Cake 2"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Strawberry Shortcake</h5>
+                <p class="price">Rp 68.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/f8/44/bb/f844bb01bd08323c46c98f5eeac07dba.jpg"
+                alt="Cake 3"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Blueberry Cheesecake</h5>
+                <p class="price">Rp 80.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/2e/76/44/2e7644e3aeca244a0fed48d96c82bf7d.jpg"
+                alt="Cake 1"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Red Velvet Slice</h5>
+                <p class="price">Rp 65.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/7e/e2/92/7ee2925d400ee11645154338430533a1.jpg"
+                alt="Cake 2"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Strawberry Shortcake</h5>
+                <p class="price">Rp 68.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/f8/44/bb/f844bb01bd08323c46c98f5eeac07dba.jpg"
+                alt="Cake 3"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Blueberry Cheesecake</h5>
+                <p class="price">Rp 80.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/1200x/d0/8a/fc/d08afc7507b9358851baf537f3573526.jpg"
+                alt="Cake 1"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Fudge Cake</h5>
+                <p class="price">Rp 75.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/7e/e2/92/7ee2925d400ee11645154338430533a1.jpg"
+                alt="Cake 2"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Strawberry Shortcake</h5>
+                <p class="price">Rp 68.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img
+                src="https://i.pinimg.com/736x/f8/44/bb/f844bb01bd08323c46c98f5eeac07dba.jpg"
+                alt="Cake 3"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Blueberry Cheesecake</h5>
+                <p class="price">Rp 80.000</p>
+                <button class="btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <p>© 2025 ruxthree. All rights reserved.</p>
+        <div class="address">
+          <i class="fas fa-map-marker-alt"></i> Jl. Melati No. 45, Lamongan,
+          Jawa Timur, Indonesia<br />
+          <i class="fas fa-envelope"></i> support@ruxthree.id<br />
+          <i class="fas fa-phone-alt"></i> +62 8345678989
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".btn-buy");
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const productCard = btn.closest(".product-card");
+            const name = productCard.querySelector(".card-title").innerText;
+            const priceText = productCard.querySelector(".price").innerText;
+
+            let price = parseInt(priceText.replace(/\D/g, ""));
+            let qty = prompt(
+              `You selected "${name}" (${priceText}).\nEnter quantity:`
+            );
+
+            if (qty && !isNaN(qty) && qty > 0) {
+              const total = price * qty;
+              alert(
+                `Order Summary:\nProduct: ${name}\nPrice: ${priceText}\nQuantity: ${qty}\nTotal: Rp ${total.toLocaleString()}`
+              );
+            } else {
+              alert("Please enter a valid quantity.");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
